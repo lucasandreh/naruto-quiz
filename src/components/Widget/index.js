@@ -41,6 +41,9 @@ Widget.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
-}`
+}
+  a {
+    color: #fff;
+  }`
 
 export default Widget
