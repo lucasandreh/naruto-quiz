@@ -8,6 +8,9 @@ import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizLogo from '../src/components/QuizLogo';
 
 export const QuizContainer = styled.div`
     width: 100%;
@@ -19,35 +22,6 @@ export const QuizContainer = styled.div`
     padding: 15px;
   }`;
 
-const NameInput = styled.input`
-    width: 300px;
-    height: 30px;
-
-    text-align: center;
-    border: 2px solid #010101;
-
-    color: #fff;
-    background-color: ${({ theme }) => theme.colors.primary};
-
-    font-size: 16px;
-`;
-
-const PlayButton = styled.button`
-      width: 300px;
-      height: 40px;
-
-      margin-top: 20px;
-
-      background-color: ${({ theme }) => theme.colors.primary};
-
-      color: #fff;
-      border: 2px solid #010101;
-
-      transition: 0.5s;
-
-      font-size: 16px;
-`;
-
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
@@ -55,6 +29,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header><h1>NARUTO QUIZ</h1></Widget.Header>
           <Widget.Content>
@@ -65,17 +40,19 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <NameInput
+              <Input
+                name="nomeDoUsuario"
                 onChange={(infosDoEvento) => {
                   console.log(infosDoEvento.target.value);
                   setName(infosDoEvento.target.value);
                 }}
                 placeholder="Como você se chama?"
+                value={name}
               />
-              <PlayButton type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                Seja bem vindo(a): {name}
-              </PlayButton>
+                Vamos jogar, {name}!
+              </Button>
             </form>
           </Widget.Content>
         </Widget>

@@ -4,25 +4,51 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "image": "https://animezeira.site/wp-content/uploads/2019/02/1304.jpg",
+        "title": "Em que ano o anime Naruto começou a ser exibido?",
+        "description": "E aí, lembra?",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "1 de outubro de 1997",
+          "6 de setembro de 2000",
+          "3 de outubro de 2002",
+          "15 de junho de 2004"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://www.hqzona.com.br/wp-content/uploads/2019/09/Team_Kakashi-1024x841-1024x841.png",
+        "title": "Qual é o nome do pai de Naruto?",
+        "description": "E aí, lembra?",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Minato Namikaze",
+           "Kakashi Namikaze",
+           "Itachi Namikaze",
+           "Asuma Namikaze"
+        ]
+      },
+      {
+        "image": "https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc-f:fbcover/wp-content/uploads/2020/05/legiao_uyBgzfKO_ewH.png.jpeg",
+        "title": "Qual desses era o time 7?",
+        "description": "E aí, lembra?",
+        "answer": 3,
+        "alternatives": [
+           "Hinata, Kiba e Shino",
+           "Rock Lee, Ino e Choji",
+           "Gaara, Temari e Kankuro",
+           "Naruto, Sakura e Sasuke"
+        ]
+      },
+      {
+        "image": "https://ovicio.com.br/wp-content/uploads/2020/11/20201127-kurama-and-naruto-featured-image.jpg",
+        "title": "Qual o nome da biju de Naruto?",
+        "description": "E aí, lembra?",
+        "answer": 2,
+        "alternatives": [
+           "Saiken",
+           "Choumei",
+           "Kurama",
+           "Shukaku"
         ]
       }
     ],
