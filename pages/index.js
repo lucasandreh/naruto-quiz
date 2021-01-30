@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -11,6 +12,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizLogo from '../src/components/QuizLogo';
+import Link from '../src/components/Link';
 
 export const QuizContainer = styled.div`
     width: 100%;
@@ -30,7 +32,16 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget 
+          as={motion.section}
+          transition={{ duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header><h1>NARUTO QUIZ</h1></Widget.Header>
           <Widget.Content>
             <form onSubmit={(infosDoEvento) => {
@@ -51,15 +62,38 @@ export default function Home() {
               />
               <Button type="submit" disabled={name.length === 0}>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                Vamos jogar, {name}!
+                VAMOS JOGAR {name.toUpperCase()}?
               </Button>
             </form>
           </Widget.Content>
         </Widget>
-        <Widget>
+        <Widget 
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1>Quizes da galera</h1>
-            <p>Em breve aparecerão quizes de uma galera muito bacana.</p>
+            {db.external.map((linkExterno) => { 
+              const [projectName, userName] = linkExterno.replace('https:', '')
+              .replace(/\//g, '')
+              .replace('.vercel.app', '')
+              .split('.')
+              return (
+                <div>
+                  <ul>
+                    <li key={`project__${projectName}`}><Widget.Topic as={Link} href={`/quiz/${projectName}___${userName}`}>
+                          {userName}/{projectName}
+                      </Widget.Topic></li>
+                  </ul>
+                </div>
+              )
+            })}
           </Widget.Content>
         </Widget>
         <Footer />

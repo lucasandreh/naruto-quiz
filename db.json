@@ -16,7 +16,7 @@
         ]
       },
       {
-        "image": "https://www.hqzona.com.br/wp-content/uploads/2019/09/Team_Kakashi-1024x841-1024x841.png",
+        "image": "https://s.aficionados.com.br/imagens/conheca-minato-namikaze-o-pai-de-naruto_f.jpg",
         "title": "Qual é o nome do pai de Naruto?",
         "description": "E aí, lembra?",
         "answer": 0,
@@ -50,10 +50,25 @@
            "Kurama",
            "Shukaku"
         ]
+      },
+      {
+        "image": "https://agreeordie.com/wp-content/uploads/2014/08/hokage.jpg",
+        "title": "Quanto Hokages existem?",
+        "description": "E aí, lembra?",
+        "answer": 2,
+        "alternatives": [
+           "4",
+           "9",
+           "8",
+           "5"
+        ]
       }
     ],
     "external": [
-      ""
+      "https://quiz-imersao-react.olucasalves.vercel.app/",
+      "https://alura-imersao-react-next.rafaelyano.vercel.app/",
+      "https://alura-quiz-avengers.fernanda-kipper.vercel.app/",
+      "https://darksouls-quiz.gui-leandro.vercel.app/"
     ],
     "theme": {
       "colors": {
