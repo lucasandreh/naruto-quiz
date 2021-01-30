@@ -55,12 +55,12 @@
         "image": "https://agreeordie.com/wp-content/uploads/2014/08/hokage.jpg",
         "title": "Quanto Hokages existem?",
         "description": "E aí, lembra?",
-        "answer": 2,
+        "answer": 3,
         "alternatives": [
            "4",
            "9",
            "8",
-           "5"
+           "7"
         ]
       }
     ],
